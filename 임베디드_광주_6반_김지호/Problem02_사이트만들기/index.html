@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .menu-circle {
+        border: 1px solid black;
+        background-color: blue;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+      }
+      .menu-image {
+        width: 25px;
+        height: 25px;
+        margin-top: 3px;
+        margin-left: 3px;
+      }
+      .card-images {
+        width: 130px;
+        height: 100px;
+      }
+      header h2 {
+        text-align: center;
+        margin-block-start: 0px;
+        background-color: gray;
+      }
+      nav {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+      }
+      nav h2 {
+        margin-left: 10px;
+      }
+      .card {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+      }
+      .border {
+        border: 1px solid gray;
+      }
+      .box {
+        margin: 3px 3px 3px 3px;
+        width: 200px;
+        height: 100px;
+      }
+      .box-title {
+        margin: 3px 3px 3px 3px;
+        background-color: darkblue;
+        color: aliceblue;
+        text-align: center;
+      }
+      p {
+        text-align: center;
+      }
+      .empty-box {
+        height: 20px;
+      }
+    </style>
+  </head>
+  <body class="border">
+    <header>
+      <h2 class="border">KFC World</h2>
+    </header>
+    <nav>
+      <div class="menu-circle">
+        <img
+          class="menu-image"
+          src="./images/hamburger-gbbfffd9a4_1280.png"
+          alt="menu-image"
+        />
+      </div>
+      <h2>메뉴판</h2>
+    </nav>
+    <main>
+      <div class="card">
+        <img
+          class="card-images"
+          src="./images/hamburger-gac62146e3_1280.jpg"
+          alt="fire-burger"
+        />
+        <div class="box border">
+          <div class="border box-title">Fire Bugger</div>
+          <p>
+            맵지 않습니다. <br />
+            다만 뜨거운 불타는 버거
+          </p>
+        </div>
+      </div>
+      <div class="empty-box"></div>
+      <div class="card">
+        <div class="box border">
+          <div class="border box-title">Degda Bugger</div>
+          <p>
+            하나의 가격으로 <br />
+            2개의 버거를 먹는 재미
+          </p>
+        </div>
+        <img
+          class="card-images"
+          src="./images/hamburger-gaccc60aee_1280.jpg"
+          alt="Degada-Bugger"
+        />
+      </div>
+      <div class="empty-box"></div>
+    </main>
+  </body>
+</html>

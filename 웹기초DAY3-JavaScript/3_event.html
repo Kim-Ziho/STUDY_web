@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button class="sample-btn">나를 클릭해!</button>
+    <script>
+      const sampleBtn = document.querySelector(".sample-btn");
+      function showAlert() {
+        alert("야호");
+      }
+      console.log(sampleBtn);
+      sampleBtn.addEventListener("click", showAlert);
+      // Callback !!!
+      // 특정한 조건을 달성할때까지 기다리는 Callback 함수
+      // 파라미터로 들어가는 함수
+      // sampleBtn.addEventListener("click", function () {
+      //   alert("jiho");
+      // });
+    </script>
+  </body>
+</html>
