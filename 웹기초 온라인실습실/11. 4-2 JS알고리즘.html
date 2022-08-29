@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+    <link rel="stylesheet" href="./11. 4-2 JS알고리즘.css" />
+  </head>
+  <body>
+    <ul class="switcher">
+      <li id="grayButton"></li>
+      <li id="whiteButton"></li>
+      <li id="navyButton"></li>
+    </ul>
+
+    <h1>Theme Switcher</h1>
+
+    <p>테마를 바꿔봅시다.</p>
+
+    <script>
+      const grayButton = document.querySelector("#grayButton");
+      grayButton.addEventListener('click', () => {
+        document.querySelector("body").style.backgroundColor = 'gray';
+        document.querySelector("body").style.color = 'white';
+      })
+      const whiteButton = document.querySelector("#whiteButton");
+      whiteButton.addEventListener('click', () => {
+        document.querySelector("body").style.backgroundColor = 'white';
+        document.querySelector("body").style.color = 'black';
+      })
+      const navyButton = document.querySelector("#navyButton");
+      navyButton.addEventListener('click', () => {
+        document.querySelector("body").style.backgroundColor = 'navy';
+        document.querySelector("body").style.color = 'white';
+      })
+
+    </script>
+  </body>
+</html>
