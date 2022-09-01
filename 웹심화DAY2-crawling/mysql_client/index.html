@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <button>요청하기</button>
+  
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script>
+    const button = document.querySelector("button");
+    button.addEventListener('click', async function(e){
+      // const result = await axios.get("http://localhost:8080/api/menus");
+      // console.log(result);
+      const menu_name = "옥수수";
+      const menu_description = "따끈따끈";
+      const result = await axios.post('http://localhost:8080/api/menus', {
+        menu_name,
+        // menu_description: menu_description, 키와 값이 같으면 생략가능
+        menu_description,
+      });
+    console.log(result);
+    });
+  </script>
+</body>
+</html>
