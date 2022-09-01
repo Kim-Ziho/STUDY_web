@@ -2,6 +2,7 @@ const express = require("express");
 const {pool} = require("./db")
 const app = express();
 app.use(express.static(__dirname + "/views"))
+app.use(express.json()) // post 요청
 
 app.get("/", (req, res) => {
   res.render("index")
@@ -19,6 +20,8 @@ app.get("/todos", async (request, response) => {
   }
 })
 
-// app.post("")
+app.post("/todo", (req, res) => {
+  console.log(req.body)
+})
 
 app.listen(8080, () => {console.log("hi 8080")})
