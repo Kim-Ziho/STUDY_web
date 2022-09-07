@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app">
+      <input type="text" ref="input_ret" />
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.10/dist/vue.min.js"></script>
+    <script>
+      const app = new Vue({
+        el: "#app",
+        data() {
+          return {
+            todo: {},
+          };
+        },
+        methods: {},
+        // 인스턴스가 생성되었지만 아직 화면에 붙여지지 않은 단계에 자동 실행
+        created() {
+          console.log("created");
+          console.log(this$refs);
+        },
+        // 인스턴스가 화면에 부착된 이후 자동 실행
+        mounted() {
+          console.log("mounted");
+          console.log(this.$refs.input_ref);
+          this.$refs.input_ref.focus();
+        },
+      });
+    </script>
+  </body>
+</html>
