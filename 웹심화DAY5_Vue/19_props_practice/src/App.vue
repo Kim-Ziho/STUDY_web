@@ -1,7 +1,7 @@
 <template>
   <div>
     <h1>App</h1>
-    <Child :salt="salt" :title="title" />
+    <Child @emit1="changeSalt" :salt="salt" :title="title" />
   </div>
 </template>
 
@@ -15,6 +15,11 @@ export default {
     return {
       salt: 30,
       title: "치킨은 맛있다"
+    }
+  },
+  methods: {
+    changeSalt(salt) {
+      this.salt = salt
     }
   }
 }

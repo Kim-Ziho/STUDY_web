@@ -2,6 +2,7 @@
   <div>
     <h1>ChickenChild</h1>
     <button @click="viewSalt">소금</button>
+    <button @click="changeSalt">소금 양 변경</button>
     <p v-if="seen">
       {{ salt }}
       <br />
@@ -17,6 +18,9 @@ export default {
     viewSalt() {
       this.seen = true
     },
+    changeSalt() {
+      this.$emit("emit1", 20)
+    }
   },
   data() {
     return {
